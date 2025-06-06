@@ -7,14 +7,17 @@ on:
         description: 'folder parameter'
         required: true
         type: string
+        default: 'tutorial'
       output1:
         description: 'output1 parameter'
         required: true
         type: string
+        default: 'sample1.csv'
       output2:
         description: 'output2 parameter'
         required: true
         type: string
+        default: 'sample2.csv'
 
 jobs:
   run-function:
