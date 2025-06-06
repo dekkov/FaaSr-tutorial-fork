@@ -28,3 +28,9 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: dekkov/FaaSr-tutorial-fork
+      
+      - name: Run R function
+        run: |
+          Rscript create_sample_data.R ${{ github.event.inputs.folder }}
+${{ github.event.inputs.output1 }}
+${{ github.event.inputs.output2 }}
