@@ -1,0 +1,27 @@
+name: create_sample_data
+
+on:
+  workflow_dispatch:
+    inputs:
+      folder:
+        description: 'folder parameter'
+        required: true
+        type: string
+      output1:
+        description: 'output1 parameter'
+        required: true
+        type: string
+      output2:
+        description: 'output2 parameter'
+        required: true
+        type: string
+
+jobs:
+  run-function:
+    runs-on: ubuntu-latest
+    container: ghcr.io/faasr/github-actions-tidyverse
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          repository: dekkov/FaaSr-tutorial-fork
