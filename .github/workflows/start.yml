@@ -2,10 +2,6 @@ name: Running Action- start
 
 on:
   workflow_dispatch:
-    inputs:
-      PAYLOAD:
-        description: 'Payload'
-        required: false
 
 jobs:
   run_docker_image:
@@ -13,7 +9,7 @@ jobs:
     container: ghcr.io/faasr/github-actions-tidyverse
     env:
       SECRET_PAYLOAD: ${{ secrets.SECRET_PAYLOAD }}
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_PAT: ${{ secrets.PAT }}
       PAYLOAD_REPO: ${{ vars.PAYLOAD_REPO }}
       PAYLOAD: ${{ github.event.inputs.PAYLOAD }}
     steps:
