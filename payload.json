@@ -1,7 +1,7 @@
 {
     "ComputeServers": {
         "My_GitHub_Account": {
-            "FaaSType": "GitHubActions",
+            "FaaSType": "GithubActions",
             "UserName": "dekkov",
             "ActionRepoName": "FaaSr-CLI-test",
             "Branch": "main"
@@ -51,5 +51,5 @@
     "FaaSrLog": "FaaSrLog",
     "LoggingDataStore": "My_Minio_Bucket",
     "DefaultDataStore": "My_Minio_Bucket",
-    "_workflow_file": "project1.json"
+    "_workflow_file": "project1_github.json"
 }
